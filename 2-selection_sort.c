@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * selection_sort - 
+ * selection_sort -  sort element by swaping them
  * @array: the array to sort
  * @size: the size of the array
  */
@@ -24,3 +24,4 @@ void selection_sort(int *array, size_t size)
 		print_array(array,size);
 	}
 }
+
