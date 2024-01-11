@@ -5,7 +5,8 @@
  * @node1:the first node
  * @node2:the second node
 */
-void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2) {
+void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2)
+{
 	if (!node1 || !node2)
 		return;
 
@@ -30,17 +31,19 @@ void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2) {
  * @list: a doubley linked list
 */
 
-void insertion_sort_list(listint_t **list) 
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *current = (*list)->next;
 
 	if (!list || !(*list) || !((*list)->next))
 		return;
 
-	while (current) 
+	while (current)
 	{
 		listint_t *insert = current->prev;
-		while (insert && insert->n > current->n) {
+
+		while (insert && insert->n > current->n)
+		{
 			swap_nodes(list, insert, current);
 			insert = current->prev;
 		}
